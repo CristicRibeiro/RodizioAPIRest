@@ -1,28 +1,27 @@
 package com.rodizio.crm.model;
 
-import java.io.Serializable;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-
+import javax.persistence.*;
 
 @Entity
+@Table (name = "USUARIO")
 public class Usuario {
 	
-	
+	@EmbeddedId
+	private UsuarioId id;
+		
 	@Column (nullable = false)
 	private String nome;
 	
-	@Id
-	@Column (nullable = false)
-	private String cpf;
-	
-	@Id
-	@Column (nullable = false)
-	private String email;
-	
-	@Column (nullable = false)
+	@Column (nullable = false) //not null
 	private String nascimento;
+
+	public UsuarioId getId() {
+		return id;
+	}
+
+	public void setId(UsuarioId id) {
+		this.id = id;
+	}
 
 	public String getNome() {
 		return nome;
@@ -32,22 +31,6 @@ public class Usuario {
 		this.nome = nome;
 	}
 
-	public String getCpf() {
-		return cpf;
-	}
-
-	public void setCpf(String cpf) {
-		this.cpf = cpf;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
 	public String getNascimento() {
 		return nascimento;
 	}
@@ -55,7 +38,7 @@ public class Usuario {
 	public void setNascimento(String nascimento) {
 		this.nascimento = nascimento;
 	}
-	
-	
+
+
 
 }

@@ -1,5 +1,7 @@
 package com.rodizio.crm.model;
 
+import java.util.List;
+
 import javax.persistence.*;
 
 @Entity
@@ -14,6 +16,9 @@ public class Usuario {
 	
 	@Column (nullable = false) //not null
 	private String nascimento;
+	
+	@OneToMany
+	private List<Veiculos> veiculos;
 
 	public UsuarioId getId() {
 		return id;

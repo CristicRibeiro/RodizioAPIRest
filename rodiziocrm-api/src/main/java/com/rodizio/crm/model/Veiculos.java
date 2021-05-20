@@ -18,10 +18,22 @@ public class Veiculos {
 	private String Marca;
 	
 	@Column (nullable = false)
+	private String codMarca;
+	
+	@Column (nullable = false)
 	private String Modelo;
 	
 	@Column (nullable = false)
+	private String codModelo;
+	
+	@Column (nullable = false)
 	private String Ano;
+	
+	@Column (nullable = false)
+	private String codAno;
+	
+	@Column
+	private String valorCarro;
 
 	public Long getId() {
 		return Id;
@@ -54,4 +66,38 @@ public class Veiculos {
 	public void setAno(String ano) {
 		Ano = ano;
 	}
+
+	public String getValorCarro() {
+		return valorCarro;
+	}
+
+	public void setValorCarro(String valorCarro) {
+		this.valorCarro = valorCarro;
+	}
+
+	public String getCodMarca() {
+		return codMarca;
+	}
+
+	public void setCodMarca(String codMarca) {
+		this.codMarca = codMarca;
+	}
+
+	public String getCodModelo() {
+		return codModelo;
+	}
+
+	public void setCodModelo(String codModelo) {
+		this.codModelo = codModelo;
+	}
+
+	public String getCodAno() {
+		return codAno;
+	}
+
+	public void setCodAno(String codAno) {
+		this.codAno = codAno;
+	}
+	
+	
 }

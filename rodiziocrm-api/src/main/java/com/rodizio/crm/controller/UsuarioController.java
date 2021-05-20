@@ -30,7 +30,7 @@ public class UsuarioController {
 	
 	@PostMapping
 	@ResponseStatus(HttpStatus.CREATED)
-	public Usuario adicionar(@RequestBody Usuario usuarios) {
+	public Usuario adicionar(@RequestBody Usuario usuarios) {		
 		return usuarioRepository.save(usuarios);
 	}
 }

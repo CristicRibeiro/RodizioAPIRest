@@ -1,7 +1,6 @@
 package com.rodizio.crm.controller;
 
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -30,8 +29,8 @@ public class UsuarioController {
 	
 	@PostMapping
 	@ResponseStatus(HttpStatus.CREATED)
-	public Usuario adicionar(@RequestBody Usuario usuarios) {		
-		return usuarioRepository.save(usuarios);
+	public Usuario adicionar(@RequestBody Usuario usuario) {		
+		return usuarioRepository.save(usuario);
 	}
 }
 

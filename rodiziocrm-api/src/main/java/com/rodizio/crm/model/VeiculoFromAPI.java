@@ -2,15 +2,15 @@ package com.rodizio.crm.model;
 
 public class VeiculoFromAPI {
 	
-	private String Valor;
-	private String Marca;
-	private String Modelo;
-	private int AnoModelo;
-	private String Combustivel;
-	private String CodigoFipe;
-	private String MesReferencia;
-	private int TipoVeiculo;
-	private String SiglaCombustivel;
+	private String valor;
+	private String marca;
+	private String modelo;
+	private int anoModelo;
+	private String combustivel;
+	private String codigoFipe;
+	private String mesReferencia;
+	private int tipoVeiculo;
+	private String siglaCombustivel;
 	
 	public VeiculoFromAPI() {
 		
@@ -19,68 +19,86 @@ public class VeiculoFromAPI {
 	public VeiculoFromAPI(String valor, String marca, String modelo, int anoModelo, String combustivel,
 			String codigoFipe, String mesReferencia, int tipoVeiculo, String siglaCombustivel) {
 		super();
-		Valor = valor;
-		Marca = marca;
-		Modelo = modelo;
-		AnoModelo = anoModelo;
-		Combustivel = combustivel;
-		CodigoFipe = codigoFipe;
-		MesReferencia = mesReferencia;
-		TipoVeiculo = tipoVeiculo;
-		SiglaCombustivel = siglaCombustivel;
+		this.valor = valor;
+		this.marca = marca;
+		this.modelo = modelo;
+		this.anoModelo = anoModelo;
+		this.combustivel = combustivel;
+		this.codigoFipe = codigoFipe;
+		this.mesReferencia = mesReferencia;
+		this.tipoVeiculo = tipoVeiculo;
+		this.siglaCombustivel = siglaCombustivel;
 	}
+
 	public String getValor() {
-		return Valor;
+		return valor;
 	}
+
 	public void setValor(String valor) {
-		Valor = valor;
+		this.valor = valor;
 	}
+
 	public String getMarca() {
-		return Marca;
+		return marca;
 	}
+
 	public void setMarca(String marca) {
-		Marca = marca;
+		this.marca = marca;
 	}
+
 	public String getModelo() {
-		return Modelo;
+		return modelo;
 	}
+
 	public void setModelo(String modelo) {
-		Modelo = modelo;
+		this.modelo = modelo;
 	}
+
 	public int getAnoModelo() {
-		return AnoModelo;
+		return anoModelo;
 	}
+
 	public void setAnoModelo(int anoModelo) {
-		AnoModelo = anoModelo;
+		this.anoModelo = anoModelo;
 	}
+
 	public String getCombustivel() {
-		return Combustivel;
+		return combustivel;
 	}
+
 	public void setCombustivel(String combustivel) {
-		Combustivel = combustivel;
+		this.combustivel = combustivel;
 	}
+
 	public String getCodigoFipe() {
-		return CodigoFipe;
+		return codigoFipe;
 	}
+
 	public void setCodigoFipe(String codigoFipe) {
-		CodigoFipe = codigoFipe;
+		this.codigoFipe = codigoFipe;
 	}
+
 	public String getMesReferencia() {
-		return MesReferencia;
+		return mesReferencia;
 	}
+
 	public void setMesReferencia(String mesReferencia) {
-		MesReferencia = mesReferencia;
+		this.mesReferencia = mesReferencia;
 	}
+
 	public int getTipoVeiculo() {
-		return TipoVeiculo;
+		return tipoVeiculo;
 	}
+
 	public void setTipoVeiculo(int tipoVeiculo) {
-		TipoVeiculo = tipoVeiculo;
+		this.tipoVeiculo = tipoVeiculo;
 	}
+
 	public String getSiglaCombustivel() {
-		return SiglaCombustivel;
+		return siglaCombustivel;
 	}
+
 	public void setSiglaCombustivel(String siglaCombustivel) {
-		SiglaCombustivel = siglaCombustivel;
+		this.siglaCombustivel = siglaCombustivel;
 	}
 }

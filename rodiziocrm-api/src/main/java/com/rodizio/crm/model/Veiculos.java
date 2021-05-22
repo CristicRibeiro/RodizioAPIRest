@@ -5,99 +5,101 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import com.rodizio.crm.model.UsuarioId;
 
 
 @Entity
 public class Veiculos {
 	
+	/*@ManyToOne
+	//private Usuario usuario;
+	private List<Usuario> usuario;
+	@targetEntity*/
+
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long Id;
 	
+		
+	@Column (nullable = false)
+	private String cpfUsuario;
+	
 	@Column (nullable = false)
 	private String Marca;
 	
-	@Column (nullable = false)
-	private String codMarca;
+	/*@Column (nullable = false)
+	private String codMarca;*/
 	
 	@Column (nullable = false)
 	private String Modelo;
 	
-	@Column (nullable = false)
-	private String codModelo;
+	/*@Column (nullable = false)
+	private String codModelo;*/
 	
 	@Column (nullable = false)
 	private String Ano;
 	
-	@Column (nullable = false)
-	private String codAno;
+	/*@Column (nullable = false)
+	private String codAno;*/
+	
+	/*@Column
+	private String valorCarro;
 	
 	@Column
-	private String valorCarro;
+	private String DiaRodizio;
+	
+	@Column
+	private boolean RodizioAtivo;*/
+	
+	/*public Usuario getUsuario() {
+		return usuario;
+	}
+
+
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
+	}*/
+
 
 	public Long getId() {
 		return Id;
 	}
-
 	public void setId(Long id) {
-		Id = id;
+		this.Id = id;
 	}
+
+	
+	public String getcpfUsuario() {
+		return cpfUsuario;
+	}
+	public void setcpfUsuario(String cpfUsuario) {
+		this.cpfUsuario = cpfUsuario;
+	}
+
 
 	public String getMarca() {
-		return Marca;
+		return this.Marca;
 	}
-
 	public void setMarca(String marca) {
-		Marca = marca;
+		this.Marca = marca;
 	}
 
+	
 	public String getModelo() {
-		return Modelo;
+		return this.Modelo;
 	}
-
 	public void setModelo(String modelo) {
-		Modelo = modelo;
+		this.Modelo = modelo;
 	}
 
+	
 	public String getAno() {
-		return Ano;
+		return this.Ano;
 	}
-
 	public void setAno(String ano) {
-		Ano = ano;
+		this.Ano = ano;
 	}
 
-	public String getValorCarro() {
-		return valorCarro;
-	}
-
-	public void setValorCarro(String valorCarro) {
-		this.valorCarro = valorCarro;
-	}
-
-	public String getCodMarca() {
-		return codMarca;
-	}
-
-	public void setCodMarca(String codMarca) {
-		this.codMarca = codMarca;
-	}
-
-	public String getCodModelo() {
-		return codModelo;
-	}
-
-	public void setCodModelo(String codModelo) {
-		this.codModelo = codModelo;
-	}
-
-	public String getCodAno() {
-		return codAno;
-	}
-
-	public void setCodAno(String codAno) {
-		this.codAno = codAno;
-	}
-	
-	
 }
